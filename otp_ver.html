@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>OTP Verification</title>
+<link href="otp_verify/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<header>
+		<nav id="navbar" class="navbar">
+			<ul>
+			  <li><a class="nav-link scrollto active" href="choose.html">Home</a></li>
+			  <li><a class="nav-link scrollto" href="/undone/index.html">F.A.Q</a></li>
+			  <li><a class="nav-link scrollto" href="/undone/index.html">About Us</a></li>
+			  <li><a class="nav-link scrollto" href="#">Contact</a></li>
+			  <li><a class="getstarted scrollto" href="#">Logout</a></li>
+			</ul>
+			<i class="bi bi-list mobile-nav-toggle"></i>
+		  </nav><!-- .navbar -->
+		<div class="logo">
+			<h1>BOOKING WITHOUT APP</h1>
+		  </div>
+	</header>
+	
+	<div class="container">
+		<div id="sender">
+			<h3 class="sender-h3">OTP VERIFICATION</h3>
+			<input type="text" id="number" placeholder="+91..." required ><br><br>
+			<div id="recaptcha-container"></div><br><br>
+			<input type="button" id="send" value="Send" onClick="phoneAuth()">
+		</div>
+		<div id="verifier" style="display: none">
+			<h3 class="verify-h3">OTP VERIFICATION</h3>
+			<input type="text" id="verificationcode" placeholder="OTP Code"><br>
+			<input type="button" id="verify" value="Verify" onClick="codeverify()">
+			<div class="p-conf">Number Verified</div>
+			<div class="n-conf">OTP ERROR</div>
+		</div>
+	</div>
+<script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-auth-compat.js"></script>
+<script src="otp_verify/index.js"></script>
+</body>
+</html>
